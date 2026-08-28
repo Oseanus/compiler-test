@@ -103,13 +103,14 @@ if(TARGET compiler.app AND TARGET compiler.lib)
     )
 endif()
 
-# if(TARGET compiler.lib.test AND TARGET compiler.lib)
-#     target_link_libraries(
-#         compiler.lib.test
-#         PUBLIC
-#         compiler.lib
-#     )
-# endif()
+ if(TARGET compiler.lib.test AND TARGET compiler.lib)
+     target_link_libraries(
+         compiler.lib.test
+         PUBLIC
+         compiler.lib
+         GTest::gtest_main
+     )
+ endif()
 
 # ------------------------------------------------------------
 # Example for direct tests/*.cpp target:
