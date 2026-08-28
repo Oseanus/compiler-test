@@ -36,7 +36,7 @@
 	      clang-analyzer
 
 	      # Testing toold
-	      googletest
+	      gtest
 
               # Dependency manager
 #              conan
