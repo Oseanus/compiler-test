@@ -31,6 +31,13 @@
               gdb
               lldb
 
+	      # Development tools
+	      clang-tools
+	      clang-analyzer
+
+	      # Testing toold
+	      googletest
+
               # Dependency manager
 #              conan
 
@@ -47,14 +54,19 @@
               ccache
             ];
 
-            shellHook = ''
-              export CC=gcc
-              export CXX=g++
-
-              echo "CMake Development Environment"
-              echo "GCC   : $(gcc --version | head -n1)"
-              echo "Clang : $(clang --version | head -n1)"
-            '';
+	shellHook = ''
+            echo "C++ Development Environment loaded"
+            echo ""
+            echo "Available compilers:"
+            echo "  gcc   : $(gcc --version | head -n1)"
+            echo "  clang : $(clang --version | head -n1)"
+            echo ""
+            echo "Debuggers:"
+            echo "  gdb"
+            echo "  lldb"
+            echo ""
+            echo "GoogleTest / GoogleMock available via nixpkgs.googletest"
+          '';
           };
         });
     };
