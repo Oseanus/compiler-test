@@ -37,7 +37,7 @@
 
 	      # Testing toold
 	      gtest
-	      gmock
+#	      gmock
 
               # Dependency manager
 #              conan
