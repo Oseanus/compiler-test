@@ -10,13 +10,13 @@ set(ROOT_CPP_STANDARD 20)
 # Direct folders under src/ can be treated as LIB or APP.
 #
 # Example:
-#   src/sample
+#   src/compiler
 #
 # If DIRECT_SRC_PROJECT_TYPE is LIB:
-#   src/sample -> sample.lib
+#   src/compiler -> compiler.lib
 #
 # If DIRECT_SRC_PROJECT_TYPE is APP:
-#   src/sample -> sample.app
+#   src/compiler -> compiler.app
 set(DIRECT_SRC_PROJECT_TYPE "LIB")
 
 # Default library type for all generated library targets.
@@ -32,10 +32,10 @@ set(DEFAULT_LIBRARY_TYPE "STATIC")
 #   <target-name>_LIBRARY_TYPE
 #
 # Examples:
-#   src/lib/sample -> sample.lib
-#   override var   -> sample.lib_LIBRARY_TYPE
+#   src/lib/compiler -> compiler.lib
+#   override var   -> compiler.lib_LIBRARY_TYPE
 #
-# set(sample.lib_LIBRARY_TYPE "SHARED")
+# set(compiler.lib_LIBRARY_TYPE "SHARED")
 # set(math.lib_LIBRARY_TYPE "STATIC")
 # set(network.lib_LIBRARY_TYPE "SHARED")
 
@@ -85,29 +85,29 @@ find_package(GTest REQUIRED)
 # ------------------------------------------------------------
 # Example layout:
 #
-#   src/lib/sample
-#       -> sample.lib
+#   src/lib/compiler
+#       -> compiler.lib
 #
-#   src/apps/sample
-#       -> sample.app
+#   src/apps/compiler
+#       -> compiler.app
 #
-#   tests/sample
-#       -> sample.lib.test
+#   tests/compiler
+#       -> compiler.lib.test
 # ------------------------------------------------------------
 
-if(TARGET sample.app AND TARGET sample.lib)
+if(TARGET compiler.app AND TARGET compiler.lib)
     target_link_libraries(
-            sample.app
+            compiler.app
             PUBLIC
-            sample.lib
+            compiler.lib
     )
 endif()
 
-# if(TARGET sample.lib.test AND TARGET sample.lib)
+# if(TARGET compiler.lib.test AND TARGET compiler.lib)
 #     target_link_libraries(
-#         sample.lib.test
+#         compiler.lib.test
 #         PUBLIC
-#         sample.lib
+#         compiler.lib
 #     )
 # endif()
 
@@ -120,11 +120,11 @@ endif()
 #   ${ROOT_PROJECT_NAME}.lib.test
 # ------------------------------------------------------------
 
-# if(TARGET ${ROOT_PROJECT_NAME}.lib.test AND TARGET sample.lib)
+# if(TARGET ${ROOT_PROJECT_NAME}.lib.test AND TARGET compiler.lib)
 #     target_link_libraries(
 #         ${ROOT_PROJECT_NAME}.lib.test
 #         PUBLIC
-#             sample.lib
+#             compiler.lib
 #     )
 # endif()
 
