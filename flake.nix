@@ -36,7 +36,7 @@
 	      clang-analyzer
 
 	      # Testing toold
-	      nixpkgs.googletest
+	      googletest
 
               # Dependency manager
 #              conan
