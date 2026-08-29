@@ -32,3 +32,23 @@ nix develop
 
 For other Linux systems or platforms you might need to consult proper documentation.
 Note, that [Conan](https://conan.io/) may be a dependency management tool that is system agnostic to a degree.
+
+# Roadmap
+
+- [ ] Comments
+- [ ] Integer
+- [ ] Decimals
+- [ ] Arithmetic Expressions
+- [ ] Variables
+- [ ] Assignments
+- [ ] Functions
+- [ ] Strings
+- [ ] Boolean values
+- [ ] Arrays
+- [ ] Objects
+- [ ] Modules
+- [ ] Classes
+- [ ] Loops
+- [ ] Conditional statements
+- [ ] Type inference
+- [ ] User-defined types
