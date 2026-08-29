@@ -63,11 +63,15 @@
             echo "  gcc   : $(gcc --version | head -n1)"
             echo "  clang : $(clang --version | head -n1)"
             echo ""
+            echo "Documentation:"
+            echo "  Doxygen"
+            echo "  Graphviz"
+            echo ""
             echo "Debuggers:"
             echo "  gdb"
             echo "  lldb"
             echo ""
-            echo "GoogleTest / GoogleMock available via nixpkgs.googletest"
+            echo "GoogleTest / GoogleMock via gtest"
           '';
           };
         });
