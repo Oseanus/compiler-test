@@ -34,6 +34,8 @@
 	      # Development tools
 	      clang-tools
 	      clang-analyzer
+	      doxygen
+	      graphviz
 
 	      # Testing toold
 	      gtest
