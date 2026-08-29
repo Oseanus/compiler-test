@@ -1,10 +1,9 @@
-#include "sample.h"
-#include  "test/test.h"
+#include "compiler/compiler.h"
 
 int main()
 {
-    Sample::Sample::Print();
-    Sample::Test::Test::Print();
+    compiler::Compiler app;
+    app.Run();
 
     return 0;
 }
