@@ -2,7 +2,7 @@
 
 int main()
 {
-    compiler::Compiler app;
+    aondor::Compiler app;
     app.Run();
 
     return 0;
