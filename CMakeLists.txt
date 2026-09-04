@@ -95,6 +95,12 @@ find_package(GTest REQUIRED)
 #       -> compiler.lib.test
 # ------------------------------------------------------------
 
+target_link_libraries(
+        compiler.lib
+        PUBLIC
+        lexer.lib
+)
+
 if(TARGET compiler.app AND TARGET compiler.lib)
     target_link_libraries(
             compiler.app
@@ -111,6 +117,15 @@ endif()
          GTest::gtest_main
      )
  endif()
+
+if(TARGET lexer.lib.test AND TARGET lexer.lib)
+    target_link_libraries(
+            lexer.lib.test
+            PUBLIC
+            lexer.lib
+            GTest::gtest_main
+    )
+endif()
 
 # ------------------------------------------------------------
 # Example for direct tests/*.cpp target:
