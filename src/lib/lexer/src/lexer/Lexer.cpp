@@ -214,11 +214,11 @@ namespace aondor::lexer
         }
 
         return Token{
-            isDecimal
-                ? TokenType::DecimalLiteral
-                : TokenType::IntegerLiteral,
-            std::string(_source.substr(start, _position - start)),
-            SourceLocation{
+            .type = isDecimal
+                        ? TokenType::DecimalLiteral
+                        : TokenType::IntegerLiteral,
+            .lexeme = std::string(_source.substr(start, _position - start)),
+            .location = SourceLocation{
                 startLine,
                 startColumn
             }
@@ -227,7 +227,7 @@ namespace aondor::lexer
 
     Token Lexer::MakeToken(TokenType type) const
     {
-        SourceLocation location{
+        const SourceLocation location{
             .line = _line,
             .column = _column
         };
