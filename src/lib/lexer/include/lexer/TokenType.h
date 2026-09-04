@@ -3,6 +3,9 @@
 
 namespace aondor::lexer
 {
+    /**
+     * An enum that defines the types of tokens for the lexer.
+     */
     enum class TokenType
     {
         IntegerLiteral,

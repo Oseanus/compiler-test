@@ -5,6 +5,9 @@
 
 namespace aondor::lexer
 {
+    /**
+     * Defines the location of a token in the source code.
+     */
     struct SourceLocation
     {
         size_t line{1};
