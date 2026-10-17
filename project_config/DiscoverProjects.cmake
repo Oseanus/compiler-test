@@ -435,8 +435,7 @@ function(discover_projects)
 
         if(NOT HAS_USABLE_TESTS)
             message(STATUS "Optional tests folder exists but contains no usable source files. Ignoring tests.")
-        else()
-            enable_testing()
+        elseif(BUILD_TESTING)
             message(STATUS "Found usable tests folder: ${TESTS_DIR}")
 
             # ----------------------------------------------------
